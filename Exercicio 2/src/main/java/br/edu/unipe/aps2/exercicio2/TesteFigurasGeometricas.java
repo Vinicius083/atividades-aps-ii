@@ -3,28 +3,24 @@ package br.edu.unipe.aps2.exercicio2;
 public class TesteFigurasGeometricas {
     public static void main(String[] args) {
         System.out.println("=== TESTE DAS FIGURAS GEOMÉTRICAS ===\n");
-        
-        // Testando a classe Triangulo
+
         System.out.println("1. TESTANDO TRIÂNGULO:");
         Triangulo triangulo = new Triangulo(5.0, 4.0);
         System.out.println("   " + triangulo);
         System.out.println("   Nome: " + triangulo.getNomeFigura());
         System.out.println("   Área calculada: " + triangulo.calculaArea());
         System.out.println();
-        
-        // Testando a classe Losango
+
         System.out.println("2. TESTANDO LOSANGO:");
         Losango losango = new Losango(6.0, 8.0);
         System.out.println("   " + losango);
         System.out.println("   Nome: " + losango.getNomeFigura());
         System.out.println("   Área calculada: " + losango.calculaArea());
         System.out.println();
-        
-        // Testando o GerenteDeFiguras
+
         System.out.println("3. TESTANDO GERENTE DE FIGURAS:");
         GerenteDeFiguras gerente = new GerenteDeFiguras();
-        
-        // Adicionando figuras
+
         gerente.adicionaFigura(triangulo);
         gerente.adicionaFigura(losango);
         gerente.adicionaFigura(new Triangulo(3.0, 6.0));
@@ -40,8 +36,7 @@ public class TesteFigurasGeometricas {
         
         System.out.println("4. DETALHES DE TODAS AS FIGURAS:");
         gerente.imprimeFigurasDetalhadas();
-        
-        // Testando polimorfismo
+
         System.out.println("5. DEMONSTRANDO POLIMORFISMO:");
         FiguraGeometrica[] figuras = {
             new Triangulo(2.0, 3.0),
